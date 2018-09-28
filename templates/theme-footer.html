@@ -1,0 +1,46 @@
+## mako
+<%! from django.core.urlresolvers import reverse %>
+<%! from django.utils.translation import ugettext as _ %>
+<%namespace name='static' file='/static_content.html'/>
+<div class="wrapper-footer">
+  <footer>
+    <div class="powered-by">
+      <ul>
+        <li><a href="http://openedx.org/" target="_blank"><img src="${static.url('themes/fun/images/logos/powered-by-openedx.png')}" /></a></li>
+      </ul>
+    </div>
+    <div class="social-networks">
+      <ul>
+        <li><a href="https://www.facebook.com/france-universite-numerique" target="_blank"><img src="${static.url('themes/fun/images/facebook.png')}" /></a></li>
+        <li><a href="https://twitter.com/universite_num" target="_blank"><img src="${static.url('themes/fun/images/twitter.png')}" /></a></li>
+        <li><a href="http://www.dailymotion.com/fr-universite-numerique#video=x15jusx" target="_blank"><img src="${static.url('themes/fun/images/dailymotion.png')}" /></a></li>
+      </ul>
+    </div>
+    <div class="colophon">
+      <nav class="nav-colophon">
+        <ol>
+          <li><a href="/about">${_("About...")}</a></li>
+          <li>|</li>
+          <li><a href="/help">${_("Help")}</a></li>
+          <li>|</li>
+          <li><a href="${reverse('contact')}">${_("Contact")}</a></li>
+        </ol>
+      </nav>
+      <nav class="nav-colophon nav-colophon2">
+        <ol>
+          <li><a href="/tos">${_("Terms of use")}</a></li>
+          <li>|</li>
+          <li><a href="/honor">${_("Usage policy")}</a></li>
+          <li>|</li>
+          <li><a href="/privacy">${_("Privacy policy")}</a></li>
+          <li>|</li>
+          <li><a href="/legal">${_("Terms and conditions")}</a></li>
+        </ol>
+      </nav>
+    </div>
+    <div class="reference">
+      <span><a href="http://www.france-universite-numerique.fr/" target="_blank">www.france-universite-numerique.fr</a></span>
+    </div>
+  </footer>
+</div>
+
